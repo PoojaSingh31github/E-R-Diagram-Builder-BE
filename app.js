@@ -6,8 +6,6 @@ import dotenv from 'dotenv';
 import http from 'http';
 
 dotenv.config();
-
-
 const app = express();
 
 const uri = process.env.MONGOURL

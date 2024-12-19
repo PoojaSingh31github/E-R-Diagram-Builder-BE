@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 export const register = async (req, res) => {
     try {
         const { name, email, password, address } = req.body;
-        if (!name || !email || !password || !address) {
+        if (!name || !email || !password) {
             return res.status(400).json({ error: "One or more mandatory fields are empty" });
         }
 
