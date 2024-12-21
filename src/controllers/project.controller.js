@@ -2,7 +2,7 @@ import Project from "../models/project.modal.js";
 
 
 export const createProject = async (req, res) => {
-    const { name, description, nodes, edges , userId } = req.body;
+    const { name, description, nodes, edges , userId, type } = req.body;
     console.log(res.body)
 
     try {
@@ -12,6 +12,7 @@ export const createProject = async (req, res) => {
             owner: req.user.id,
             nodes,
             edges,
+            type,
         });
 
         await project.save();
